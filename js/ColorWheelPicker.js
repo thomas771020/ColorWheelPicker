@@ -1,5 +1,5 @@
 (function($) {
-  $.fn.colorWheelPicker = function(colors) {
+  $.fn.colorWheelPicker = function(colors, idx) {
     return this.each(function() {
       var jTarget = $(this),
         level = colors.length,
@@ -27,7 +27,7 @@
       }
 
       jTarget.empty().append(colorWheel);
-      changeColor(0);
+      changeColor(idx ? idx : 0);
       colorWheel.click(function() {
         var jThis = $(this),
           oIdx = jThis.data('color-index'),

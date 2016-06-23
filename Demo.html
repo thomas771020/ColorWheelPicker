@@ -18,7 +18,7 @@
     <script>
         $(function() {
             var colors = ['#f00', '#0f0', '#00f', '#ff0', '#0ff'];
-            $('.color-wheel-picker').colorWheelPicker(colors).on('change', function(event, color){
+            $('.color-wheel-picker').colorWheelPicker(colors, 1).on('change', function(event, color){
                 $('.picked-color').css('background-color', color);
             });
         });
