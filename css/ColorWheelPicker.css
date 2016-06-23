@@ -1,0 +1,62 @@
+.triangle-down {
+  border-top: 5px solid black;
+  border-left: 5px solid white;
+  border-right: 5px solid white;
+}
+.color-wheel-picker {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  display: inline-block;
+}
+.color-wheel-picker:before {
+  border-top: 5px solid black;
+  border-left: 5px solid white;
+  border-right: 5px solid white;
+  content: " ";
+  position: absolute;
+  left: 45px;
+}
+.color-wheel-picker .color-wheel {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  border-radius: 51%;
+  margin-top: 10px;
+}
+.color-wheel-picker .color-wheel .color-wheel-fan {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 100% 50%;
+  transform: rotate(120deg);
+}
+.color-wheel-picker .color-wheel .color-wheel-fan .color-wheel-fan-color {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: 100% 50%;
+  transform: rotate(60deg);
+}
+.color-wheel-picker .color-wheel:after {
+  content: " ";
+  background-color: white;
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 1000;
+  border-radius: 51%;
+}
+.picked-color {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Wheel Picker Demo</title>
+    <link rel="stylesheet" type="text/css" href="css/ColorWheelPicker.css"/>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" crossorigin="anonymous"></script>
+    <script src="js/ColorWheelPicker.js"></script>
+</head>
+
+<body>
+    <div class="color-wheel-picker"></div>
+    <span>Your pick color is:</span>
+    <div class="picked-color"></div>
+    <script>
+        $(function() {
+            var colors = ['#f00', '#0f0', '#00f', '#ff0', '#0ff'];
+            $('.color-wheel-picker').colorWheelPicker(colors).on('change', function(event, color){
+                $('.picked-color').css('background-color', color);
+            });
+        });
+    </script>
+</body>
+
+</html>
