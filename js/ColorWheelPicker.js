@@ -13,7 +13,7 @@
         changeColor = function changColor(idx) {
           colorWheel.data('color-index', idx);
           rotateWheel(idx);
-          jTarget.trigger('change', [colors[idx]]);
+          jTarget.trigger('change', [colors[idx], idx]);
         },
         i, fan, fanColor;
 
